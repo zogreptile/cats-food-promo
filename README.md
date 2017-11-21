@@ -1,7 +1,7 @@
 # Funbox task
 
 ## Посмотреть результат
-[https://zogreptile.github.io/funbox-test/](https://zogreptile.github.io/funbox-test/).
+[https://zogreptile.github.io/funbox-test/dist/](https://zogreptile.github.io/funbox-test/dist/).
 
 ## Установка
 ```javascript

@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 20px 0;
+    min-height: 100%;
+    background-image: url(../img/Pattern.jpg);
+    font-family: $font-base;
+    color: #fff;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 340px;
+        background-image: url(../img/Shadow-top.png);
+        background-repeat: repeat-x;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        height: 340px;
+        background-image: url(../img/Shadow-bottom.png);
+        background-repeat: repeat-x;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+button {
+    cursor: pointer;
+}

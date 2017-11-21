@@ -1,0 +1,51 @@
+{% extends "layout/base.html" %}
+
+{% block title%}Funbox test assignment{% endblock %}
+
+{% block styles%}
+{% endblock %}
+  
+{% block content %}
+<h1 class="title">Ты сегодня покормил кота?</h1>
+<div class="container">
+    <section class="products">
+        {% for product in products %}
+            <div class="item {% if product.absent %}item--disabled{% endif %}">
+                <div class="product-top js-get-product">
+                    <div class="product-top__text">Сказочное заморское яство</div>
+                    <div class="product-top__text-alert">Котэ не одобряет?</div>
+                </div>
+                <div class="product js-get-product">
+                    {% if product.absent %}
+                        <div class="product__overlay"></div>
+                    {% endif %}
+                    <div class="product__title">Нямушка</div>
+                    <div class="product__subtitle">{{ product.taste }}</div>
+                    {% if product.info %}
+                        <ul class="product__info">
+                            {% for item in product.info %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <img src="img/Photo.png" alt="" class="product__img">
+                    <div class="product__quantity">{{ product.quantity }}</div>
+                </div>
+                <div class="product-caption">
+                    {% if product.absent %}
+                        <div class="product-caption__none">Печалька, {{ product.taste }} закончился.</div>
+                    {% else %}
+                        <div class="product-caption__consist">{{ product.consist }}</div>
+                        <div class="product-caption__get">
+                            Чего сидишь? Порадуй котэ, <button class="product-caption__btn js-get-product">купи.</button>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

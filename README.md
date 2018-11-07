@@ -1,7 +1,4 @@
-# Funbox task
-
-## Посмотреть результат
-[https://zogreptile.github.io/funbox-test/dist/](https://zogreptile.github.io/funbox-test/dist/).
+[Посмотреть результат](https://zogreptile.github.io/cats-food-promo/dist/).
 
 ## Установка
 ```javascript
